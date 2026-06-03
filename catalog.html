@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Каталог — TechStore</title><link rel="stylesheet" href="style.css"></head>
+<body><header class="site-header">
+  <div class="header-top">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TechStore"></a>
+    <form class="search" action="catalog.html">
+      <input type="search" name="q" placeholder="Пошук товарів, наприклад MacBook">
+      <button type="submit">Знайти</button>
+    </form>
+    <a class="cart" href="contacts.html">🛒 Замовлення</a>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="contacts.html">Контакти</a>
+    <a href="catalog.html?category=laptops">Ноутбуки</a>
+    <a href="catalog.html?category=phones">Смартфони</a>
+    <a href="catalog.html?category=audio">Аудіо</a>
+    <a href="catalog.html?category=monitors">Монітори</a>
+    <a href="catalog.html?category=storage">Накопичувачі</a>
+    <a href="catalog.html?category=accessories">Аксесуари</a>
+  </nav>
+</header><main class="catalog-layout">
+<aside class="filters"><h2>Категорії</h2><button class="filter-link active" type="button" data-category="all">Усі товари</button><button class="filter-link" type="button" data-category="laptops">Ноутбуки</button><button class="filter-link" type="button" data-category="phones">Смартфони</button><button class="filter-link" type="button" data-category="audio">Аудіо</button><button class="filter-link" type="button" data-category="monitors">Монітори</button><button class="filter-link" type="button" data-category="storage">Накопичувачі</button><button class="filter-link" type="button" data-category="accessories">Аксесуари</button><h2>Фільтр</h2><label><input type="checkbox" id="discountFilter"> Акційні товари</label><label><input type="checkbox" id="budgetFilter"> До 15 000 грн</label><label><input type="checkbox" id="studyFilter"> Для навчання</label><button class="reset-filters" type="button" id="resetFilters">Скинути фільтри</button></aside>
+<section class="catalog-main"><h1>Каталог товарів TechStore</h1><p>Категорії, фільтри та пошук на цій сторінці працюють через JavaScript.</p><p id="filterStatus" class="filter-status">Показано всі товари.</p><div class="product-grid catalog-products"></div><section class="table-section"><h2>Таблиця товарів</h2><table><thead><tr><th>№</th><th>Назва</th><th>Категорія</th><th>Ціна</th></tr></thead><tbody><tr><td>1</td><td>Apple MacBook Air 13 M2 8/256 GB</td><td>Ноутбуки</td><td>19 172 грн</td></tr>
+<tr><td>2</td><td>Apple MacBook Air 15 M3 16/512 GB</td><td>Ноутбуки</td><td>23 345 грн</td></tr>
+<tr><td>3</td><td>Lenovo IdeaPad Slim 3 16/1 TB</td><td>Ноутбуки</td><td>27 518 грн</td></tr>
+<tr><td>4</td><td>Lenovo ThinkPad E14 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 691 грн</td></tr>
+<tr><td>5</td><td>ASUS Vivobook 15 i5/16/512</td><td>Ноутбуки</td><td>40 864 грн</td></tr>
+<tr><td>6</td><td>ASUS Zenbook 14 i7/16/1 TB</td><td>Ноутбуки</td><td>50 037 грн</td></tr>
+<tr><td>7</td><td>HP Pavilion 15 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 110 грн</td></tr>
+<tr><td>8</td><td>HP ProBook 450 8/256 GB</td><td>Ноутбуки</td><td>19 283 грн</td></tr>
+<tr><td>9</td><td>Acer Aspire 5 16/512 GB</td><td>Ноутбуки</td><td>23 456 грн</td></tr>
+<tr><td>10</td><td>Acer Swift Go 14 16/1 TB</td><td>Ноутбуки</td><td>27 629 грн</td></tr>
+<tr><td>11</td><td>Dell Inspiron 15 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 802 грн</td></tr>
+<tr><td>12</td><td>Dell Vostro 3520 i5/16/512</td><td>Ноутбуки</td><td>40 975 грн</td></tr>
+<tr><td>13</td><td>MSI Modern 15 i7/16/1 TB</td><td>Ноутбуки</td><td>49 048 грн</td></tr>
+<tr><td>14</td><td>Huawei MateBook D15 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 221 грн</td></tr>
+<tr><td>15</td><td>Gigabyte G5 8/256 GB</td><td>Ноутбуки</td><td>19 394 грн</td></tr>
+<tr><td>16</td><td>MSI Katana 15 16/512 GB</td><td>Ноутбуки</td><td>23 567 грн</td></tr>
+<tr><td>17</td><td>ASUS TUF Gaming A15 16/1 TB</td><td>Ноутбуки</td><td>27 740 грн</td></tr>
+<tr><td>18</td><td>Apple MacBook Air 13 M2 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 913 грн</td></tr>
+<tr><td>19</td><td>Apple MacBook Air 15 M3 i5/16/512</td><td>Ноутбуки</td><td>41 086 грн</td></tr>
+<tr><td>20</td><td>Lenovo IdeaPad Slim 3 i7/16/1 TB</td><td>Ноутбуки</td><td>49 159 грн</td></tr>
+<tr><td>21</td><td>Lenovo ThinkPad E14 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 332 грн</td></tr>
+<tr><td>22</td><td>ASUS Vivobook 15 8/256 GB</td><td>Ноутбуки</td><td>19 505 грн</td></tr>
+<tr><td>23</td><td>ASUS Zenbook 14 16/512 GB</td><td>Ноутбуки</td><td>23 678 грн</td></tr>
+<tr><td>24</td><td>HP Pavilion 15 16/1 TB</td><td>Ноутбуки</td><td>27 851 грн</td></tr>
+<tr><td>25</td><td>HP ProBook 450 Ryzen 5/16/512</td><td>Ноутбуки</td><td>33 024 грн</td></tr>
+<tr><td>26</td><td>Acer Aspire 5 i5/16/512</td><td>Ноутбуки</td><td>40 097 грн</td></tr>
+<tr><td>27</td><td>Acer Swift Go 14 i7/16/1 TB</td><td>Ноутбуки</td><td>49 270 грн</td></tr>
+<tr><td>28</td><td>Dell Inspiron 15 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 443 грн</td></tr>
+<tr><td>29</td><td>Dell Vostro 3520 8/256 GB</td><td>Ноутбуки</td><td>19 616 грн</td></tr>
+<tr><td>30</td><td>MSI Modern 15 16/512 GB</td><td>Ноутбуки</td><td>23 789 грн</td></tr>
+<tr><td>31</td><td>Huawei MateBook D15 16/1 TB</td><td>Ноутбуки</td><td>27 962 грн</td></tr>
+<tr><td>32</td><td>Gigabyte G5 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 035 грн</td></tr>
+<tr><td>33</td><td>MSI Katana 15 i5/16/512</td><td>Ноутбуки</td><td>40 208 грн</td></tr>
+<tr><td>34</td><td>ASUS TUF Gaming A15 i7/16/1 TB</td><td>Ноутбуки</td><td>49 381 грн</td></tr>
+<tr><td>35</td><td>Apple MacBook Air 13 M2 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 554 грн</td></tr>
+<tr><td>36</td><td>Apple MacBook Air 15 M3 8/256 GB</td><td>Ноутбуки</td><td>19 727 грн</td></tr>
+<tr><td>37</td><td>Lenovo IdeaPad Slim 3 16/512 GB</td><td>Ноутбуки</td><td>23 900 грн</td></tr>
+<tr><td>38</td><td>Lenovo ThinkPad E14 16/1 TB</td><td>Ноутбуки</td><td>28 073 грн</td></tr>
+<tr><td>39</td><td>ASUS Vivobook 15 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 146 грн</td></tr>
+<tr><td>40</td><td>ASUS Zenbook 14 i5/16/512</td><td>Ноутбуки</td><td>40 319 грн</td></tr>
+<tr><td>41</td><td>HP Pavilion 15 i7/16/1 TB</td><td>Ноутбуки</td><td>49 492 грн</td></tr>
+<tr><td>42</td><td>HP ProBook 450 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 665 грн</td></tr>
+<tr><td>43</td><td>Acer Aspire 5 8/256 GB</td><td>Ноутбуки</td><td>19 838 грн</td></tr>
+<tr><td>44</td><td>Acer Swift Go 14 16/512 GB</td><td>Ноутбуки</td><td>24 011 грн</td></tr>
+<tr><td>45</td><td>Dell Inspiron 15 16/1 TB</td><td>Ноутбуки</td><td>27 084 грн</td></tr>
+<tr><td>46</td><td>Dell Vostro 3520 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 257 грн</td></tr>
+<tr><td>47</td><td>MSI Modern 15 i5/16/512</td><td>Ноутбуки</td><td>40 430 грн</td></tr>
+<tr><td>48</td><td>Huawei MateBook D15 i7/16/1 TB</td><td>Ноутбуки</td><td>49 603 грн</td></tr>
+<tr><td>49</td><td>Gigabyte G5 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 776 грн</td></tr>
+<tr><td>50</td><td>MSI Katana 15 8/256 GB</td><td>Ноутбуки</td><td>19 949 грн</td></tr>
+<tr><td>51</td><td>ASUS TUF Gaming A15 16/512 GB</td><td>Ноутбуки</td><td>23 022 грн</td></tr>
+<tr><td>52</td><td>Apple MacBook Air 13 M2 16/1 TB</td><td>Ноутбуки</td><td>27 195 грн</td></tr>
+<tr><td>53</td><td>Apple MacBook Air 15 M3 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 368 грн</td></tr>
+<tr><td>54</td><td>Lenovo IdeaPad Slim 3 i5/16/512</td><td>Ноутбуки</td><td>40 541 грн</td></tr>
+<tr><td>55</td><td>Lenovo ThinkPad E14 i7/16/1 TB</td><td>Ноутбуки</td><td>49 714 грн</td></tr>
+<tr><td>56</td><td>ASUS Vivobook 15 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 887 грн</td></tr>
+<tr><td>57</td><td>ASUS Zenbook 14 8/256 GB</td><td>Ноутбуки</td><td>20 060 грн</td></tr>
+<tr><td>58</td><td>HP Pavilion 15 16/512 GB</td><td>Ноутбуки</td><td>23 133 грн</td></tr>
+<tr><td>59</td><td>HP ProBook 450 16/1 TB</td><td>Ноутбуки</td><td>27 306 грн</td></tr>
+<tr><td>60</td><td>Acer Aspire 5 Ryzen 5/16/512</td><td>Ноутбуки</td><td>32 479 грн</td></tr>
+<tr><td>61</td><td>Acer Swift Go 14 i5/16/512</td><td>Ноутбуки</td><td>40 652 грн</td></tr>
+<tr><td>62</td><td>Dell Inspiron 15 i7/16/1 TB</td><td>Ноутбуки</td><td>49 825 грн</td></tr>
+<tr><td>63</td><td>Dell Vostro 3520 Ryzen 7/16/1 TB</td><td>Ноутбуки</td><td>63 998 грн</td></tr>
+<tr><td>64</td><td>MSI Modern 15 8/256 GB</td><td>Ноутбуки</td><td>19 071 грн</td></tr>
+<tr><td>65</td><td>Samsung Galaxy A55 6/128 GB</td><td>Смартфони</td><td>6 172 грн</td></tr>
+<tr><td>66</td><td>Samsung Galaxy S23 FE 8/128 GB</td><td>Смартфони</td><td>9 345 грн</td></tr>
+<tr><td>67</td><td>Xiaomi Redmi Note 13 8/256 GB</td><td>Смартфони</td><td>13 518 грн</td></tr>
+<tr><td>68</td><td>Xiaomi Redmi Note 13 Pro 12/256 GB</td><td>Смартфони</td><td>17 691 грн</td></tr>
+<tr><td>69</td><td>Apple iPhone 13 12/512 GB</td><td>Смартфони</td><td>22 864 грн</td></tr>
+<tr><td>70</td><td>Apple iPhone 14 6/128 GB</td><td>Смартфони</td><td>30 037 грн</td></tr>
+<tr><td>71</td><td>Motorola Moto G84 8/128 GB</td><td>Смартфони</td><td>40 110 грн</td></tr>
+<tr><td>72</td><td>Motorola Edge 40 Neo 8/256 GB</td><td>Смартфони</td><td>6 283 грн</td></tr>
+<tr><td>73</td><td>Realme 12 Pro 12/256 GB</td><td>Смартфони</td><td>9 456 грн</td></tr>
+<tr><td>74</td><td>OPPO Reno 11 12/512 GB</td><td>Смартфони</td><td>13 629 грн</td></tr>
+<tr><td>75</td><td>OnePlus Nord CE 3 6/128 GB</td><td>Смартфони</td><td>17 802 грн</td></tr>
+<tr><td>76</td><td>Google Pixel 7a 8/128 GB</td><td>Смартфони</td><td>22 975 грн</td></tr>
+<tr><td>77</td><td>Poco X6 Pro 8/256 GB</td><td>Смартфони</td><td>29 048 грн</td></tr>
+<tr><td>78</td><td>Honor 90 12/256 GB</td><td>Смартфони</td><td>40 221 грн</td></tr>
+<tr><td>79</td><td>Nothing Phone 2a 12/512 GB</td><td>Смартфони</td><td>6 394 грн</td></tr>
+<tr><td>80</td><td>Samsung Galaxy A55 6/128 GB</td><td>Смартфони</td><td>9 567 грн</td></tr>
+<tr><td>81</td><td>Samsung Galaxy S23 FE 8/128 GB</td><td>Смартфони</td><td>13 740 грн</td></tr>
+<tr><td>82</td><td>Xiaomi Redmi Note 13 8/256 GB</td><td>Смартфони</td><td>17 913 грн</td></tr>
+<tr><td>83</td><td>Xiaomi Redmi Note 13 Pro 12/256 GB</td><td>Смартфони</td><td>23 086 грн</td></tr>
+<tr><td>84</td><td>Apple iPhone 13 12/512 GB</td><td>Смартфони</td><td>29 159 грн</td></tr>
+<tr><td>85</td><td>Apple iPhone 14 6/128 GB</td><td>Смартфони</td><td>40 332 грн</td></tr>
+<tr><td>86</td><td>Motorola Moto G84 8/128 GB</td><td>Смартфони</td><td>6 505 грн</td></tr>
+<tr><td>87</td><td>Motorola Edge 40 Neo 8/256 GB</td><td>Смартфони</td><td>9 678 грн</td></tr>
+<tr><td>88</td><td>Realme 12 Pro 12/256 GB</td><td>Смартфони</td><td>13 851 грн</td></tr>
+<tr><td>89</td><td>OPPO Reno 11 12/512 GB</td><td>Смартфони</td><td>18 024 грн</td></tr>
+<tr><td>90</td><td>OnePlus Nord CE 3 6/128 GB</td><td>Смартфони</td><td>22 097 грн</td></tr>
+<tr><td>91</td><td>Google Pixel 7a 8/128 GB</td><td>Смартфони</td><td>29 270 грн</td></tr>
+<tr><td>92</td><td>Poco X6 Pro 8/256 GB</td><td>Смартфони</td><td>40 443 грн</td></tr>
+<tr><td>93</td><td>Honor 90 12/256 GB</td><td>Смартфони</td><td>6 616 грн</td></tr>
+<tr><td>94</td><td>Nothing Phone 2a 12/512 GB</td><td>Смартфони</td><td>9 789 грн</td></tr>
+<tr><td>95</td><td>Samsung Galaxy A55 6/128 GB</td><td>Смартфони</td><td>13 962 грн</td></tr>
+<tr><td>96</td><td>Samsung Galaxy S23 FE 8/128 GB</td><td>Смартфони</td><td>17 035 грн</td></tr>
+<tr><td>97</td><td>Xiaomi Redmi Note 13 8/256 GB</td><td>Смартфони</td><td>22 208 грн</td></tr>
+<tr><td>98</td><td>Xiaomi Redmi Note 13 Pro 12/256 GB</td><td>Смартфони</td><td>29 381 грн</td></tr>
+<tr><td>99</td><td>Apple iPhone 13 12/512 GB</td><td>Смартфони</td><td>40 554 грн</td></tr>
+<tr><td>100</td><td>Apple iPhone 14 6/128 GB</td><td>Смартфони</td><td>6 727 грн</td></tr>
+<tr><td>101</td><td>Motorola Moto G84 8/128 GB</td><td>Смартфони</td><td>9 900 грн</td></tr>
+<tr><td>102</td><td>Motorola Edge 40 Neo 8/256 GB</td><td>Смартфони</td><td>14 073 грн</td></tr>
+<tr><td>103</td><td>Realme 12 Pro 12/256 GB</td><td>Смартфони</td><td>17 146 грн</td></tr>
+<tr><td>104</td><td>OPPO Reno 11 12/512 GB</td><td>Смартфони</td><td>22 319 грн</td></tr>
+<tr><td>105</td><td>OnePlus Nord CE 3 6/128 GB</td><td>Смартфони</td><td>29 492 грн</td></tr>
+<tr><td>106</td><td>Google Pixel 7a 8/128 GB</td><td>Смартфони</td><td>40 665 грн</td></tr>
+<tr><td>107</td><td>Poco X6 Pro 8/256 GB</td><td>Смартфони</td><td>6 838 грн</td></tr>
+<tr><td>108</td><td>Honor 90 12/256 GB</td><td>Смартфони</td><td>10 011 грн</td></tr>
+<tr><td>109</td><td>Nothing Phone 2a 12/512 GB</td><td>Смартфони</td><td>13 084 грн</td></tr>
+<tr><td>110</td><td>Samsung Galaxy A55 6/128 GB</td><td>Смартфони</td><td>17 257 грн</td></tr>
+<tr><td>111</td><td>Samsung Galaxy S23 FE 8/128 GB</td><td>Смартфони</td><td>22 430 грн</td></tr>
+<tr><td>112</td><td>Xiaomi Redmi Note 13 8/256 GB</td><td>Смартфони</td><td>29 603 грн</td></tr>
+<tr><td>113</td><td>Xiaomi Redmi Note 13 Pro 12/256 GB</td><td>Смартфони</td><td>40 776 грн</td></tr>
+<tr><td>114</td><td>Apple iPhone 13 12/512 GB</td><td>Смартфони</td><td>6 949 грн</td></tr>
+<tr><td>115</td><td>Apple iPhone 14 6/128 GB</td><td>Смартфони</td><td>9 022 грн</td></tr>
+<tr><td>116</td><td>Motorola Moto G84 8/128 GB</td><td>Смартфони</td><td>13 195 грн</td></tr>
+<tr><td>117</td><td>Motorola Edge 40 Neo 8/256 GB</td><td>Смартфони</td><td>17 368 грн</td></tr>
+<tr><td>118</td><td>Realme 12 Pro 12/256 GB</td><td>Смартфони</td><td>22 541 грн</td></tr>
+<tr><td>119</td><td>OPPO Reno 11 12/512 GB</td><td>Смартфони</td><td>29 714 грн</td></tr>
+<tr><td>120</td><td>OnePlus Nord CE 3 6/128 GB</td><td>Смартфони</td><td>40 887 грн</td></tr>
+<tr><td>121</td><td>Google Pixel 7a 8/128 GB</td><td>Смартфони</td><td>7 060 грн</td></tr>
+<tr><td>122</td><td>Poco X6 Pro 8/256 GB</td><td>Смартфони</td><td>9 133 грн</td></tr>
+<tr><td>123</td><td>Apple AirPods 4 Bluetooth</td><td>Аудіо</td><td>872 грн</td></tr>
+<tr><td>124</td><td>Apple AirPods Pro 2 ANC</td><td>Аудіо</td><td>1 545 грн</td></tr>
+<tr><td>125</td><td>JBL Tune 520BT TWS</td><td>Аудіо</td><td>2 318 грн</td></tr>
+<tr><td>126</td><td>JBL Wave Beam Gaming</td><td>Аудіо</td><td>3 191 грн</td></tr>
+<tr><td>127</td><td>Sony WH-CH520 Wireless</td><td>Аудіо</td><td>4 864 грн</td></tr>
+<tr><td>128</td><td>Sony WF-C700N USB-C</td><td>Аудіо</td><td>7 037 грн</td></tr>
+<tr><td>129</td><td>Samsung Galaxy Buds FE Studio</td><td>Аудіо</td><td>9 110 грн</td></tr>
+<tr><td>130</td><td>Anker Soundcore Life Q30 Bluetooth</td><td>Аудіо</td><td>983 грн</td></tr>
+<tr><td>131</td><td>Marshall Major IV ANC</td><td>Аудіо</td><td>1 656 грн</td></tr>
+<tr><td>132</td><td>Xiaomi Redmi Buds 5 TWS</td><td>Аудіо</td><td>2 429 грн</td></tr>
+<tr><td>133</td><td>Logitech Zone Vibe Gaming</td><td>Аудіо</td><td>3 302 грн</td></tr>
+<tr><td>134</td><td>Sennheiser HD 350BT Wireless</td><td>Аудіо</td><td>4 975 грн</td></tr>
+<tr><td>135</td><td>Baseus Bowie MA10 USB-C</td><td>Аудіо</td><td>6 048 грн</td></tr>
+<tr><td>136</td><td>Jabra Elite 4 Studio</td><td>Аудіо</td><td>9 221 грн</td></tr>
+<tr><td>137</td><td>Razer BlackShark V2 X Bluetooth</td><td>Аудіо</td><td>1 094 грн</td></tr>
+<tr><td>138</td><td>Apple AirPods 4 ANC</td><td>Аудіо</td><td>1 767 грн</td></tr>
+<tr><td>139</td><td>Apple AirPods Pro 2 TWS</td><td>Аудіо</td><td>2 540 грн</td></tr>
+<tr><td>140</td><td>JBL Tune 520BT Gaming</td><td>Аудіо</td><td>3 413 грн</td></tr>
+<tr><td>141</td><td>JBL Wave Beam Wireless</td><td>Аудіо</td><td>5 086 грн</td></tr>
+<tr><td>142</td><td>Sony WH-CH520 USB-C</td><td>Аудіо</td><td>6 159 грн</td></tr>
+<tr><td>143</td><td>Sony WF-C700N Studio</td><td>Аудіо</td><td>9 332 грн</td></tr>
+<tr><td>144</td><td>Samsung Galaxy Buds FE Bluetooth</td><td>Аудіо</td><td>1 205 грн</td></tr>
+<tr><td>145</td><td>Anker Soundcore Life Q30 ANC</td><td>Аудіо</td><td>1 878 грн</td></tr>
+<tr><td>146</td><td>Marshall Major IV TWS</td><td>Аудіо</td><td>2 651 грн</td></tr>
+<tr><td>147</td><td>Xiaomi Redmi Buds 5 Gaming</td><td>Аудіо</td><td>3 524 грн</td></tr>
+<tr><td>148</td><td>Logitech Zone Vibe Wireless</td><td>Аудіо</td><td>4 097 грн</td></tr>
+<tr><td>149</td><td>Sennheiser HD 350BT USB-C</td><td>Аудіо</td><td>6 270 грн</td></tr>
+<tr><td>150</td><td>Baseus Bowie MA10 Studio</td><td>Аудіо</td><td>9 443 грн</td></tr>
+<tr><td>151</td><td>Jabra Elite 4 Bluetooth</td><td>Аудіо</td><td>1 316 грн</td></tr>
+<tr><td>152</td><td>Razer BlackShark V2 X ANC</td><td>Аудіо</td><td>1 989 грн</td></tr>
+<tr><td>153</td><td>Apple AirPods 4 TWS</td><td>Аудіо</td><td>2 762 грн</td></tr>
+<tr><td>154</td><td>Apple AirPods Pro 2 Gaming</td><td>Аудіо</td><td>2 535 грн</td></tr>
+<tr><td>155</td><td>JBL Tune 520BT Wireless</td><td>Аудіо</td><td>4 208 грн</td></tr>
+<tr><td>156</td><td>JBL Wave Beam USB-C</td><td>Аудіо</td><td>6 381 грн</td></tr>
+<tr><td>157</td><td>Sony WH-CH520 Studio</td><td>Аудіо</td><td>9 554 грн</td></tr>
+<tr><td>158</td><td>Sony WF-C700N Bluetooth</td><td>Аудіо</td><td>1 427 грн</td></tr>
+<tr><td>159</td><td>Samsung Galaxy Buds FE ANC</td><td>Аудіо</td><td>2 100 грн</td></tr>
+<tr><td>160</td><td>Anker Soundcore Life Q30 TWS</td><td>Аудіо</td><td>2 873 грн</td></tr>
+<tr><td>161</td><td>Marshall Major IV Gaming</td><td>Аудіо</td><td>2 646 грн</td></tr>
+<tr><td>162</td><td>Xiaomi Redmi Buds 5 Wireless</td><td>Аудіо</td><td>4 319 грн</td></tr>
+<tr><td>163</td><td>Logitech Zone Vibe USB-C</td><td>Аудіо</td><td>6 492 грн</td></tr>
+<tr><td>164</td><td>Sennheiser HD 350BT Studio</td><td>Аудіо</td><td>9 665 грн</td></tr>
+<tr><td>165</td><td>Baseus Bowie MA10 Bluetooth</td><td>Аудіо</td><td>1 538 грн</td></tr>
+<tr><td>166</td><td>Jabra Elite 4 ANC</td><td>Аудіо</td><td>2 211 грн</td></tr>
+<tr><td>167</td><td>Razer BlackShark V2 X TWS</td><td>Аудіо</td><td>1 884 грн</td></tr>
+<tr><td>168</td><td>Apple AirPods 4 Gaming</td><td>Аудіо</td><td>2 757 грн</td></tr>
+<tr><td>169</td><td>Apple AirPods Pro 2 Wireless</td><td>Аудіо</td><td>4 430 грн</td></tr>
+<tr><td>170</td><td>Logitech Signature M650 Wireless</td><td>Аксесуари</td><td>372 грн</td></tr>
+<tr><td>171</td><td>Logitech K380 Keyboard USB-C</td><td>Аксесуари</td><td>745 грн</td></tr>
+<tr><td>172</td><td>Logitech MK270 Combo Bluetooth</td><td>Аксесуари</td><td>1 218 грн</td></tr>
+<tr><td>173</td><td>TP-Link Archer T3U Gaming</td><td>Аксесуари</td><td>1 691 грн</td></tr>
+<tr><td>174</td><td>Baseus 65W Charger Compact</td><td>Аксесуари</td><td>2 364 грн</td></tr>
+<tr><td>175</td><td>Anker PowerCore 10000 Pro</td><td>Аксесуари</td><td>3 237 грн</td></tr>
+<tr><td>176</td><td>Ugreen USB-C Hub Black</td><td>Аксесуари</td><td>3 610 грн</td></tr>
+<tr><td>177</td><td>Kingston Canvas Reader Wireless</td><td>Аксесуари</td><td>483 грн</td></tr>
+<tr><td>178</td><td>A4Tech Bloody Mouse USB-C</td><td>Аксесуари</td><td>856 грн</td></tr>
+<tr><td>179</td><td>Hoco USB-C Cable Bluetooth</td><td>Аксесуари</td><td>1 329 грн</td></tr>
+<tr><td>180</td><td>Belkin HDMI Cable Gaming</td><td>Аксесуари</td><td>1 802 грн</td></tr>
+<tr><td>181</td><td>Trust GXT Mouse Pad Compact</td><td>Аксесуари</td><td>2 475 грн</td></tr>
+<tr><td>182</td><td>Xiaomi Mi Router 4A Pro</td><td>Аксесуари</td><td>2 248 грн</td></tr>
+<tr><td>183</td><td>Razer DeathAdder Essential Black</td><td>Аксесуари</td><td>3 721 грн</td></tr>
+<tr><td>184</td><td>Microsoft Bluetooth Mouse Wireless</td><td>Аксесуари</td><td>594 грн</td></tr>
+<tr><td>185</td><td>Defender Laptop Stand USB-C</td><td>Аксесуари</td><td>967 грн</td></tr>
+<tr><td>186</td><td>Baseus USB Hub Bluetooth</td><td>Аксесуари</td><td>1 440 грн</td></tr>
+<tr><td>187</td><td>Logitech Signature M650 Gaming</td><td>Аксесуари</td><td>1 913 грн</td></tr>
+<tr><td>188</td><td>Logitech K380 Keyboard Compact</td><td>Аксесуари</td><td>2 586 грн</td></tr>
+<tr><td>189</td><td>Logitech MK270 Combo Pro</td><td>Аксесуари</td><td>2 359 грн</td></tr>
+<tr><td>190</td><td>TP-Link Archer T3U Black</td><td>Аксесуари</td><td>3 832 грн</td></tr>
+<tr><td>191</td><td>Baseus 65W Charger Wireless</td><td>Аксесуари</td><td>705 грн</td></tr>
+<tr><td>192</td><td>Anker PowerCore 10000 USB-C</td><td>Аксесуари</td><td>1 078 грн</td></tr>
+<tr><td>193</td><td>Ugreen USB-C Hub Bluetooth</td><td>Аксесуари</td><td>1 551 грн</td></tr>
+<tr><td>194</td><td>Kingston Canvas Reader Gaming</td><td>Аксесуари</td><td>2 024 грн</td></tr>
+<tr><td>195</td><td>A4Tech Bloody Mouse Compact</td><td>Аксесуари</td><td>1 597 грн</td></tr>
+<tr><td>196</td><td>Hoco USB-C Cable Pro</td><td>Аксесуари</td><td>2 470 грн</td></tr>
+<tr><td>197</td><td>Belkin HDMI Cable Black</td><td>Аксесуари</td><td>3 943 грн</td></tr>
+<tr><td>198</td><td>Trust GXT Mouse Pad Wireless</td><td>Аксесуари</td><td>816 грн</td></tr>
+<tr><td>199</td><td>Xiaomi Mi Router 4A USB-C</td><td>Аксесуари</td><td>1 189 грн</td></tr>
+<tr><td>200</td><td>Razer DeathAdder Essential Bluetooth</td><td>Аксесуари</td><td>1 662 грн</td></tr>
+<tr><td>201</td><td>Microsoft Bluetooth Mouse Gaming</td><td>Аксесуари</td><td>1 035 грн</td></tr>
+<tr><td>202</td><td>Defender Laptop Stand Compact</td><td>Аксесуари</td><td>1 708 грн</td></tr>
+<tr><td>203</td><td>Baseus USB Hub Pro</td><td>Аксесуари</td><td>2 581 грн</td></tr>
+<tr><td>204</td><td>Logitech Signature M650 Black</td><td>Аксесуари</td><td>4 054 грн</td></tr>
+<tr><td>205</td><td>Logitech K380 Keyboard Wireless</td><td>Аксесуари</td><td>927 грн</td></tr>
+<tr><td>206</td><td>Logitech MK270 Combo USB-C</td><td>Аксесуари</td><td>1 300 грн</td></tr>
+<tr><td>207</td><td>TP-Link Archer T3U Bluetooth</td><td>Аксесуари</td><td>1 773 грн</td></tr>
+<tr><td>208</td><td>Baseus 65W Charger Gaming</td><td>Аксесуари</td><td>1 146 грн</td></tr>
+<tr><td>209</td><td>Anker PowerCore 10000 Compact</td><td>Аксесуари</td><td>1 819 грн</td></tr>
+<tr><td>210</td><td>Ugreen USB-C Hub Pro</td><td>Аксесуари</td><td>2 692 грн</td></tr>
+<tr><td>211</td><td>Kingston Canvas Reader Black</td><td>Аксесуари</td><td>4 165 грн</td></tr>
+<tr><td>212</td><td>A4Tech Bloody Mouse Wireless</td><td>Аксесуари</td><td>1 038 грн</td></tr>
+<tr><td>213</td><td>Hoco USB-C Cable USB-C</td><td>Аксесуари</td><td>1 411 грн</td></tr>
+<tr><td>214</td><td>Belkin HDMI Cable Bluetooth</td><td>Аксесуари</td><td>784 грн</td></tr>
+<tr><td>215</td><td>Trust GXT Mouse Pad Gaming</td><td>Аксесуари</td><td>1 257 грн</td></tr>
+<tr><td>216</td><td>Xiaomi Mi Router 4A Compact</td><td>Аксесуари</td><td>1 930 грн</td></tr>
+<tr><td>217</td><td>Razer DeathAdder Essential Pro</td><td>Аксесуари</td><td>2 803 грн</td></tr>
+<tr><td>218</td><td>Microsoft Bluetooth Mouse Black</td><td>Аксесуари</td><td>4 276 грн</td></tr>
+<tr><td>219</td><td>Defender Laptop Stand Wireless</td><td>Аксесуари</td><td>1 149 грн</td></tr>
+<tr><td>220</td><td>Baseus USB Hub USB-C</td><td>Аксесуари</td><td>422 грн</td></tr>
+<tr><td>221</td><td>Logitech Signature M650 Bluetooth</td><td>Аксесуари</td><td>895 грн</td></tr>
+<tr><td>222</td><td>Logitech K380 Keyboard Gaming</td><td>Аксесуари</td><td>1 368 грн</td></tr>
+<tr><td>223</td><td>Logitech MK270 Combo Compact</td><td>Аксесуари</td><td>2 041 грн</td></tr>
+<tr><td>224</td><td>TP-Link Archer T3U Pro</td><td>Аксесуари</td><td>2 914 грн</td></tr>
+<tr><td>225</td><td>Baseus 65W Charger Black</td><td>Аксесуари</td><td>4 387 грн</td></tr>
+<tr><td>226</td><td>Anker PowerCore 10000 Wireless</td><td>Аксесуари</td><td>1 260 грн</td></tr>
+<tr><td>227</td><td>Ugreen USB-C Hub USB-C</td><td>Аксесуари</td><td>533 грн</td></tr>
+<tr><td>228</td><td>Kingston Canvas Reader Bluetooth</td><td>Аксесуари</td><td>1 006 грн</td></tr>
+<tr><td>229</td><td>A4Tech Bloody Mouse Gaming</td><td>Аксесуари</td><td>1 479 грн</td></tr>
+<tr><td>230</td><td>Hoco USB-C Cable Compact</td><td>Аксесуари</td><td>2 152 грн</td></tr>
+<tr><td>231</td><td>Belkin HDMI Cable Pro</td><td>Аксесуари</td><td>3 025 грн</td></tr>
+<tr><td>232</td><td>Trust GXT Mouse Pad Black</td><td>Аксесуари</td><td>4 498 грн</td></tr>
+<tr><td>233</td><td>Xiaomi Mi Router 4A Wireless</td><td>Аксесуари</td><td>271 грн</td></tr>
+<tr><td>234</td><td>Razer DeathAdder Essential USB-C</td><td>Аксесуари</td><td>644 грн</td></tr>
+<tr><td>235</td><td>Microsoft Bluetooth Mouse Bluetooth</td><td>Аксесуари</td><td>1 117 грн</td></tr>
+<tr><td>236</td><td>Defender Laptop Stand Gaming</td><td>Аксесуари</td><td>1 590 грн</td></tr>
+<tr><td>237</td><td>Baseus USB Hub Compact</td><td>Аксесуари</td><td>2 263 грн</td></tr>
+<tr><td>238</td><td>Logitech Signature M650 Pro</td><td>Аксесуари</td><td>3 136 грн</td></tr>
+<tr><td>239</td><td>Logitech K380 Keyboard Black</td><td>Аксесуари</td><td>3 509 грн</td></tr>
+<tr><td>240</td><td>Logitech MK270 Combo Wireless</td><td>Аксесуари</td><td>382 грн</td></tr>
+<tr><td>241</td><td>TP-Link Archer T3U USB-C</td><td>Аксесуари</td><td>755 грн</td></tr>
+<tr><td>242</td><td>Baseus 65W Charger Bluetooth</td><td>Аксесуари</td><td>1 228 грн</td></tr>
+<tr><td>243</td><td>Samsung Odyssey G3 24 24″ 75 Hz</td><td>Монітори</td><td>4 172 грн</td></tr>
+<tr><td>244</td><td>Samsung Smart Monitor M5 24″ 144 Hz</td><td>Монітори</td><td>5 845 грн</td></tr>
+<tr><td>245</td><td>LG UltraGear 27 27″ 75 Hz</td><td>Монітори</td><td>7 518 грн</td></tr>
+<tr><td>246</td><td>LG 24MP400 27″ 165 Hz</td><td>Монітори</td><td>9 191 грн</td></tr>
+<tr><td>247</td><td>AOC 24G2SPU 27″ 2K</td><td>Монітори</td><td>11 864 грн</td></tr>
+<tr><td>248</td><td>AOC Q27G2E 32″ 4K</td><td>Монітори</td><td>16 037 грн</td></tr>
+<tr><td>249</td><td>ASUS TUF Gaming VG249Q Curved</td><td>Монітори</td><td>22 110 грн</td></tr>
+<tr><td>250</td><td>ASUS ProArt PA248QV 24″ 75 Hz</td><td>Монітори</td><td>4 283 грн</td></tr>
+<tr><td>251</td><td>Dell P2422H 24″ 144 Hz</td><td>Монітори</td><td>5 956 грн</td></tr>
+<tr><td>252</td><td>Dell S2721HN 27″ 75 Hz</td><td>Монітори</td><td>7 629 грн</td></tr>
+<tr><td>253</td><td>HP M24f 27″ 165 Hz</td><td>Монітори</td><td>9 302 грн</td></tr>
+<tr><td>254</td><td>Acer Nitro VG240Y 27″ 2K</td><td>Монітори</td><td>11 975 грн</td></tr>
+<tr><td>255</td><td>Philips 243V7QDSB 32″ 4K</td><td>Монітори</td><td>15 048 грн</td></tr>
+<tr><td>256</td><td>BenQ GW2480 Curved</td><td>Монітори</td><td>22 221 грн</td></tr>
+<tr><td>257</td><td>MSI Optix G2412 24″ 75 Hz</td><td>Монітори</td><td>4 394 грн</td></tr>
+<tr><td>258</td><td>Samsung Odyssey G3 24 24″ 144 Hz</td><td>Монітори</td><td>6 067 грн</td></tr>
+<tr><td>259</td><td>Samsung Smart Monitor M5 27″ 75 Hz</td><td>Монітори</td><td>7 740 грн</td></tr>
+<tr><td>260</td><td>LG UltraGear 27 27″ 165 Hz</td><td>Монітори</td><td>9 413 грн</td></tr>
+<tr><td>261</td><td>LG 24MP400 27″ 2K</td><td>Монітори</td><td>12 086 грн</td></tr>
+<tr><td>262</td><td>AOC 24G2SPU 32″ 4K</td><td>Монітори</td><td>15 159 грн</td></tr>
+<tr><td>263</td><td>AOC Q27G2E Curved</td><td>Монітори</td><td>22 332 грн</td></tr>
+<tr><td>264</td><td>ASUS TUF Gaming VG249Q 24″ 75 Hz</td><td>Монітори</td><td>4 505 грн</td></tr>
+<tr><td>265</td><td>ASUS ProArt PA248QV 24″ 144 Hz</td><td>Монітори</td><td>6 178 грн</td></tr>
+<tr><td>266</td><td>Dell P2422H 27″ 75 Hz</td><td>Монітори</td><td>7 851 грн</td></tr>
+<tr><td>267</td><td>Dell S2721HN 27″ 165 Hz</td><td>Монітори</td><td>9 524 грн</td></tr>
+<tr><td>268</td><td>HP M24f 27″ 2K</td><td>Монітори</td><td>11 097 грн</td></tr>
+<tr><td>269</td><td>Acer Nitro VG240Y 32″ 4K</td><td>Монітори</td><td>15 270 грн</td></tr>
+<tr><td>270</td><td>Philips 243V7QDSB Curved</td><td>Монітори</td><td>22 443 грн</td></tr>
+<tr><td>271</td><td>BenQ GW2480 24″ 75 Hz</td><td>Монітори</td><td>4 616 грн</td></tr>
+<tr><td>272</td><td>MSI Optix G2412 24″ 144 Hz</td><td>Монітори</td><td>6 289 грн</td></tr>
+<tr><td>273</td><td>Samsung Odyssey G3 24 27″ 75 Hz</td><td>Монітори</td><td>7 962 грн</td></tr>
+<tr><td>274</td><td>Samsung Smart Monitor M5 27″ 165 Hz</td><td>Монітори</td><td>8 535 грн</td></tr>
+<tr><td>275</td><td>LG UltraGear 27 27″ 2K</td><td>Монітори</td><td>11 208 грн</td></tr>
+<tr><td>276</td><td>LG 24MP400 32″ 4K</td><td>Монітори</td><td>15 381 грн</td></tr>
+<tr><td>277</td><td>AOC 24G2SPU Curved</td><td>Монітори</td><td>22 554 грн</td></tr>
+<tr><td>278</td><td>AOC Q27G2E 24″ 75 Hz</td><td>Монітори</td><td>4 727 грн</td></tr>
+<tr><td>279</td><td>ASUS TUF Gaming VG249Q 24″ 144 Hz</td><td>Монітори</td><td>6 400 грн</td></tr>
+<tr><td>280</td><td>ASUS ProArt PA248QV 27″ 75 Hz</td><td>Монітори</td><td>8 073 грн</td></tr>
+<tr><td>281</td><td>Dell P2422H 27″ 165 Hz</td><td>Монітори</td><td>8 646 грн</td></tr>
+<tr><td>282</td><td>Kingston DataTraveler Exodia 64 GB</td><td>Накопичувачі</td><td>472 грн</td></tr>
+<tr><td>283</td><td>Kingston NV2 SSD 128 GB</td><td>Накопичувачі</td><td>945 грн</td></tr>
+<tr><td>284</td><td>Samsung 980 SSD 256 GB</td><td>Накопичувачі</td><td>1 518 грн</td></tr>
+<tr><td>285</td><td>Samsung T7 Portable 500 GB</td><td>Накопичувачі</td><td>2 291 грн</td></tr>
+<tr><td>286</td><td>WD Elements Portable 1 TB</td><td>Накопичувачі</td><td>3 364 грн</td></tr>
+<tr><td>287</td><td>WD Blue SN570 2 TB</td><td>Накопичувачі</td><td>5 037 грн</td></tr>
+<tr><td>288</td><td>SanDisk Ultra Flair 4 TB</td><td>Накопичувачі</td><td>7 110 грн</td></tr>
+<tr><td>289</td><td>SanDisk Extreme Portable 64 GB</td><td>Накопичувачі</td><td>583 грн</td></tr>
+<tr><td>290</td><td>Transcend StoreJet 25M3 128 GB</td><td>Накопичувачі</td><td>1 056 грн</td></tr>
+<tr><td>291</td><td>Crucial MX500 256 GB</td><td>Накопичувачі</td><td>1 629 грн</td></tr>
+<tr><td>292</td><td>Crucial P3 Plus 500 GB</td><td>Накопичувачі</td><td>2 402 грн</td></tr>
+<tr><td>293</td><td>Seagate Expansion Portable 1 TB</td><td>Накопичувачі</td><td>3 475 грн</td></tr>
+<tr><td>294</td><td>Goodram IRDM SSD 2 TB</td><td>Накопичувачі</td><td>4 048 грн</td></tr>
+<tr><td>295</td><td>ADATA SU650 4 TB</td><td>Накопичувачі</td><td>7 221 грн</td></tr>
+<tr><td>296</td><td>Lexar JumpDrive 64 GB</td><td>Накопичувачі</td><td>694 грн</td></tr>
+<tr><td>297</td><td>Kingston DataTraveler Exodia 128 GB</td><td>Накопичувачі</td><td>1 167 грн</td></tr>
+<tr><td>298</td><td>Kingston NV2 SSD 256 GB</td><td>Накопичувачі</td><td>1 740 грн</td></tr>
+<tr><td>299</td><td>Samsung 980 SSD 500 GB</td><td>Накопичувачі</td><td>2 513 грн</td></tr>
+<tr><td>300</td><td>Samsung T7 Portable 1 TB</td><td>Накопичувачі</td><td>3 586 грн</td></tr>
+<tr><td>301</td><td>WD Elements Portable 2 TB</td><td>Накопичувачі</td><td>4 159 грн</td></tr>
+<tr><td>302</td><td>WD Blue SN570 4 TB</td><td>Накопичувачі</td><td>7 332 грн</td></tr>
+<tr><td>303</td><td>SanDisk Ultra Flair 64 GB</td><td>Накопичувачі</td><td>805 грн</td></tr>
+<tr><td>304</td><td>SanDisk Extreme Portable 128 GB</td><td>Накопичувачі</td><td>1 278 грн</td></tr>
+<tr><td>305</td><td>Transcend StoreJet 25M3 256 GB</td><td>Накопичувачі</td><td>1 851 грн</td></tr>
+<tr><td>306</td><td>Crucial MX500 500 GB</td><td>Накопичувачі</td><td>2 624 грн</td></tr>
+<tr><td>307</td><td>Crucial P3 Plus 1 TB</td><td>Накопичувачі</td><td>2 597 грн</td></tr>
+<tr><td>308</td><td>Seagate Expansion Portable 2 TB</td><td>Накопичувачі</td><td>4 270 грн</td></tr>
+<tr><td>309</td><td>Goodram IRDM SSD 4 TB</td><td>Накопичувачі</td><td>7 443 грн</td></tr>
+<tr><td>310</td><td>ADATA SU650 64 GB</td><td>Накопичувачі</td><td>916 грн</td></tr>
+<tr><td>311</td><td>Lexar JumpDrive 128 GB</td><td>Накопичувачі</td><td>1 389 грн</td></tr>
+<tr><td>312</td><td>Kingston DataTraveler Exodia 256 GB</td><td>Накопичувачі</td><td>1 962 грн</td></tr>
+<tr><td>313</td><td>Kingston NV2 SSD 500 GB</td><td>Накопичувачі</td><td>1 635 грн</td></tr>
+<tr><td>314</td><td>Samsung 980 SSD 1 TB</td><td>Накопичувачі</td><td>2 708 грн</td></tr>
+<tr><td>315</td><td>Samsung T7 Portable 2 TB</td><td>Накопичувачі</td><td>4 381 грн</td></tr>
+<tr><td>316</td><td>WD Elements Portable 4 TB</td><td>Накопичувачі</td><td>7 554 грн</td></tr>
+<tr><td>317</td><td>WD Blue SN570 64 GB</td><td>Накопичувачі</td><td>1 027 грн</td></tr>
+<tr><td>318</td><td>SanDisk Ultra Flair 128 GB</td><td>Накопичувачі</td><td>1 500 грн</td></tr>
+<tr><td>319</td><td>SanDisk Extreme Portable 256 GB</td><td>Накопичувачі</td><td>2 073 грн</td></tr>
+<tr><td>320</td><td>Transcend StoreJet 25M3 500 GB</td><td>Накопичувачі</td><td>1 746 грн</td></tr>
+<tr><td>321</td><td>Crucial MX500 1 TB</td><td>Накопичувачі</td><td>2 819 грн</td></tr>
+<tr><td>322</td><td>Crucial P3 Plus 2 TB</td><td>Накопичувачі</td><td>4 492 грн</td></tr>
+<tr><td>323</td><td>Seagate Expansion Portable 4 TB</td><td>Накопичувачі</td><td>7 665 грн</td></tr>
+<tr><td>324</td><td>Goodram IRDM SSD 64 GB</td><td>Накопичувачі</td><td>1 138 грн</td></tr>
+<tr><td>325</td><td>ADATA SU650 128 GB</td><td>Накопичувачі</td><td>1 611 грн</td></tr>
+<tr><td>326</td><td>Lexar JumpDrive 256 GB</td><td>Накопичувачі</td><td>1 084 грн</td></tr>
+<tr><td>327</td><td>Kingston DataTraveler Exodia 500 GB</td><td>Накопичувачі</td><td>1 857 грн</td></tr>
+<tr><td>328</td><td>Kingston NV2 SSD 1 TB</td><td>Накопичувачі</td><td>2 930 грн</td></tr>
+<tr><td>329</td><td>Samsung 980 SSD 2 TB</td><td>Накопичувачі</td><td>4 603 грн</td></tr>
+<tr><td>330</td><td>Samsung T7 Portable 4 TB</td><td>Накопичувачі</td><td>7 776 грн</td></tr>
+<tr><td>331</td><td>WD Elements Portable 64 GB</td><td>Накопичувачі</td><td>1 249 грн</td></tr>
+<tr><td>332</td><td>WD Blue SN570 128 GB</td><td>Накопичувачі</td><td>622 грн</td></tr>
+<tr><td>333</td><td>SanDisk Ultra Flair 256 GB</td><td>Накопичувачі</td><td>1 195 грн</td></tr>
+<tr><td>334</td><td>SanDisk Extreme Portable 500 GB</td><td>Накопичувачі</td><td>1 968 грн</td></tr>
+<tr><td>335</td><td>Transcend StoreJet 25M3 1 TB</td><td>Накопичувачі</td><td>3 041 грн</td></tr>
+<tr><td>336</td><td>Crucial MX500 2 TB</td><td>Накопичувачі</td><td>4 714 грн</td></tr>
+<tr><td>337</td><td>Crucial P3 Plus 4 TB</td><td>Накопичувачі</td><td>7 887 грн</td></tr></tbody></table></section></section>
+</main><footer class="footer">
+  <div><h3>TechStore</h3><p>Навчальний онлайн-каталог техніки у стилі сучасних інтернет-магазинів.</p></div>
+  <div><h3>Контакти</h3><p>Email: info@techstore.example</p><p>Телефон: +380 50 111 22 33</p></div>
+  <div><h3>Покупцям</h3><p>Доставка, оплата, гарантія, консультація.</p></div>
+</footer><script src="script.js"></script></body></html>

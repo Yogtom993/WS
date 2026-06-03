@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти — TechStore</title><link rel="stylesheet" href="style.css">
+</head>
+<body><header class="site-header">
+  <div class="header-top">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TechStore"></a>
+    <form class="search" action="catalog.html">
+      <input type="search" name="q" placeholder="Пошук товарів, наприклад MacBook">
+      <button type="submit">Знайти</button>
+    </form>
+    <a class="cart" href="contacts.html">🛒 Замовлення</a>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Головна</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="contacts.html">Контакти</a>
+    <a href="catalog.html?category=laptops">Ноутбуки</a>
+    <a href="catalog.html?category=phones">Смартфони</a>
+    <a href="catalog.html?category=audio">Аудіо</a>
+    <a href="catalog.html?category=monitors">Монітори</a>
+    <a href="catalog.html?category=storage">Накопичувачі</a>
+    <a href="catalog.html?category=accessories">Аксесуари</a>
+  </nav>
+</header>
+<main class="contacts-layout">
+  <section class="order-form"><h1>Оформлення заявки</h1><p>Заповніть форму, щоб отримати консультацію або замовити товар.</p><form>
+    <label>Ім’я<input type="text" name="name" required placeholder="Ваше ім’я"></label>
+    <label>Email<input type="email" name="email" required placeholder="name@example.com"></label>
+    <label>Телефон<input type="tel" name="phone" required placeholder="+380501112233"></label>
+    <label>Дата консультації<input type="datetime-local" name="date"></label>
+    <label>Сайт або сторінка<input type="url" name="url" placeholder="https://example.com"></label>
+    <label>Товар<select name="product"><option>Apple MacBook Air 13 M2 8/256 GB — 39 999 грн</option>
+<option>Lenovo IdeaPad Slim 3 15AMN8 16/512 GB — 24 999 грн</option>
+<option>ASUS Vivobook 15 X1504VA i5/16/512 GB — 29 999 грн</option>
+<option>HP Pavilion 15 Ryzen 5 16/512 GB — 27 999 грн</option>
+<option>Acer Aspire 5 i5 16/512 GB — 26 999 грн</option>
+<option>Samsung Galaxy A55 5G 8/256 GB — 18 999 грн</option>
+<option>Xiaomi Redmi Note 13 Pro 8/256 GB — 12 999 грн</option>
+<option>Apple iPhone 13 128 GB — 24 999 грн</option>
+<option>Motorola Moto G84 12/256 GB — 9 999 грн</option>
+<option>Apple AirPods 4 — 7 499 грн</option>
+<option>JBL Tune 520BT — 1 999 грн</option>
+<option>Sony WH-CH520 — 2 299 грн</option>
+<option>Logitech Signature M650 Wireless — 1 699 грн</option>
+<option>Kingston DataTraveler Exodia 128 GB — 399 грн</option>
+<option>Logitech K380 Bluetooth Keyboard — 1 799 грн</option>
+<option>TP-Link Archer T3U Wi-Fi Adapter — 699 грн</option>
+<option>Samsung Odyssey G3 24″ 144 Hz — 6 999 грн</option>
+<option>LG UltraGear 27″ 165 Hz — 9 499 грн</option>
+<option>WD Elements Portable 1 TB — 2 599 грн</option>
+<option>Samsung 980 SSD 500 GB — 1 899 грн</option></select></label>
+    <label>Коментар<textarea rows="5" placeholder="Напишіть, що вас цікавить"></textarea></label>
+    <button type="submit">Надіслати заявку</button>
+  </form></section>
+  <aside class="contact-info"><h2>Контакти магазину</h2><p><strong>Email:</strong> info@techstore.example</p><p><strong>Телефон:</strong> +380 50 111 22 33</p><p><strong>Графік:</strong> Пн–Сб, 09:00–19:00</p>
+    <h2>Фрейм із каталогом</h2><iframe src="catalog.html" title="Каталог TechStore"></iframe>
+    <section class="media-section" id="media"><h2>Аудіо та відео</h2><p>Мультимедійні елементи HTML5 з елементами керування.</p><h3>Аудіоогляд TechStore</h3><audio controls><source src="media/techstore-audio.mp3" type="audio/mpeg">Ваш браузер не підтримує аудіо.</audio><h3>Відеоогляд техніки</h3><video controls width="100%" preload="metadata"><source src="media/techstore-video.mp4" type="video/mp4">Ваш браузер не підтримує відео.</video></section>
+  </aside>
+</main><footer class="footer">
+  <div><h3>TechStore</h3><p>Навчальний онлайн-каталог техніки у стилі сучасних інтернет-магазинів.</p></div>
+  <div><h3>Контакти</h3><p>Email: info@techstore.example</p><p>Телефон: +380 50 111 22 33</p></div>
+  <div><h3>Покупцям</h3><p>Доставка, оплата, гарантія, консультація.</p></div>
+</footer><script src="script.js"></script></body></html>
