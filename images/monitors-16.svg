@@ -1,0 +1,11 @@
+<svg width="720" height="520" viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#e2e8f0"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity=".20"/></filter></defs>
+<rect width="720" height="520" rx="34" fill="url(#bg)"/>
+<rect x="42" y="42" width="636" height="436" rx="28" fill="#ffffff" stroke="#dbe4ef" stroke-width="3"/>
+<circle cx="594" cy="120" r="64" fill="#1d4ed8" opacity=".13"/>
+<text x="360" y="85" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#172033">Samsung Odyssey G3 24</text>
+<text x="360" y="120" text-anchor="middle" font-family="Arial" font-size="18" fill="#64748b">24″ 144 Hz</text>
+<g filter="url(#shadow)"><rect x="230" y="155" width="260" height="185" rx="24" fill="#f8fafc" stroke="#1d4ed8" stroke-width="8"/><text x="360" y="278" text-anchor="middle" font-family="Arial" font-size="104">🖥️</text></g>
+<rect x="215" y="370" width="290" height="26" rx="13" fill="#1d4ed8" opacity=".82"/>
+<text x="360" y="445" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#dc2626">6 067 грн</text>
+</svg>
