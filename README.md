@@ -35,7 +35,7 @@ https://github.com/Yogtom993/WS
 Повна назва папки проєкту:
 
 ```text
-TechStore_магазин_з_фільтрами_та_фото
+TechStore
 ```
 
 ---
